@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Istaria Mod Manager
+Comment=Mod Manager for Istaria: Chronicles of the Gifted
+Exec=bash -c 'DIR="$(dirname "$(readlink -f "%k")")"; konsole -e bash -c "bash \"$DIR/istaria-mods.sh\"; exec bash"'
+Icon=applications-games
+Terminal=false
+Type=Application
+Categories=Game;

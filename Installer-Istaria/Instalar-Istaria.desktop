@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Instalar Istaria
+Comment=Instalador do Istaria: Chronicles of the Gifted
+Exec=bash -c 'DIR="$(dirname "$(readlink -f "%k")")"; konsole -e bash -c "bash \"$DIR/instalar-istaria.sh\"; exec bash"'
+Icon=applications-games
+Terminal=false
+Type=Application
+Categories=Game;
