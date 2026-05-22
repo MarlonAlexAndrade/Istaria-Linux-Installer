@@ -126,6 +126,9 @@ install_dxvk() {
         log "Using bundled DXVK / Usando DXVK incluso..."
         cp "$SCRIPT_DIR/dxvk/x32/d3d9.dll" "$WINE_PREFIX/drive_c/windows/syswow64/d3d9.dll"
         cp "$SCRIPT_DIR/dxvk/x64/d3d9.dll" "$WINE_PREFIX/drive_c/windows/system32/d3d9.dll"
+        # DX8 support — Istaria uses DX8 via ENB converter chain
+        [ -f "$SCRIPT_DIR/dxvk/x32/d3d8.dll" ] && cp "$SCRIPT_DIR/dxvk/x32/d3d8.dll" "$WINE_PREFIX/drive_c/windows/syswow64/d3d8.dll" && log "d3d8.dll installed / instalado"
+        [ -f "$SCRIPT_DIR/dxvk/x64/d3d8.dll" ] && cp "$SCRIPT_DIR/dxvk/x64/d3d8.dll" "$WINE_PREFIX/drive_c/windows/system32/d3d8.dll" && log "d3d8.dll x64 installed / instalado"
     else
         log "Downloading latest DXVK / Baixando DXVK mais recente..."
         local dxvk_version

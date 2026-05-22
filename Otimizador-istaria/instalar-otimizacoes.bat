@@ -79,6 +79,7 @@ echo [Istaria Optimizer] Installing DXVK / Instalando DXVK...
 
 if exist "%SCRIPT_DIR%dxvk\x32\d3d9.dll" (
     copy /y "%SCRIPT_DIR%dxvk\x32\d3d9.dll" "%ISTARIA_DIR%\" >nul
+    if exist "%SCRIPT_DIR%dxvk\x32\d3d8.dll" copy /y "%SCRIPT_DIR%dxvk\x32\d3d8.dll" "%ISTARIA_DIR%\" >nul && echo [Istaria Optimizer] d3d8.dll installed / instalado
     echo [Istaria Optimizer] DXVK d3d9.dll installed / instalado!
 ) else (
     echo [WARN] DXVK not found in script folder / DXVK nao encontrado na pasta.
